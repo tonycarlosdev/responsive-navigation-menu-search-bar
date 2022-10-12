@@ -99,3 +99,25 @@ header .search {
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+.searchBtn {
+  position: relative;
+  left: 30px;
+  top: 2.5px;
+  transition: 0.5s ease-in-out;
+}
+.closeBtn { 
+  opacity: 0;
+  visibility:  hidden;
+  transition: 0.5s;
+  scale: 0;
+}
+.closeBtn.active {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+  scale: 1;
+}
+.menuToggle {
+  position: relative;
+  display: none;
+}

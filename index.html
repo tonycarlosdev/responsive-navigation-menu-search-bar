@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Responsivo & Barra de pesquisa</title>
+  <title>Menu Responsivo com Barra de pesquisa</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -24,6 +24,7 @@
           <ion-icon name="close-outline" class="closeBtn"></ion-icon>
         </span>
       </div>
+      <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
     </div>
     <div class="searchBox">
       <input type="text" placeholder=" Busque aqui . . .">
@@ -38,13 +39,17 @@
   <script>
     let searchBtn = document.querySelector('.searchBtn');
     let closeBtn = document.querySelector('.closeBtn');
-    let searchBox = document.querySelector('searchBox');
+    let searchBox = document.querySelector('.searchBox');
     
     searchBtn.onclick = function(){
       searchBox.classList.add('active');
+      closeBtn.classList.add('active');
+      searchBtn.classList.add('active');
     }
     closeBtn.onclick = function(){
       searchBox.classList.remove('active');
+      closeBtn.classList.remove('active');
+      searchBtn.classList.remove('active');
     }
   </script>
 </body>
